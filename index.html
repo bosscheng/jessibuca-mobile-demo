@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      #container {
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script src="./index.js"></script>
+
+    <script>
+      const player = new window.Jessibuca({
+        container: document.getElementById("container"),
+        decoder: "./index.js",
+        rotate: 270,
+        isResize: false,
+      });
+
+      // 测试的 demo 地址。
+      // 感谢nodemedia提供的测试地址。
+      setTimeout(() => {
+        // player.play("http://flv.bdplay.nodemedia.cn/live/bbb.flv");
+      }, 1000);
+    </script>
+  </body>
+</html>
