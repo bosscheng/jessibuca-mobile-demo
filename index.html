@@ -36,9 +36,18 @@
 
       // 测试的 demo 地址。
       // 感谢nodemedia提供的测试地址。
-      setTimeout(() => {
-        // player.play("http://flv.bdplay.nodemedia.cn/live/bbb.flv");
-      }, 1000);
+      if(player.hasLoaded()){
+        player.play("http://flv.bdplay.nodemedia.cn/live/bbb.flv");
+      }
+      else {
+       player.on('load',function (){
+         player.play("http://flv.bdplay.nodemedia.cn/live/bbb.flv");
+       })
+      }
+
+
+
+
     </script>
   </body>
 </html>
